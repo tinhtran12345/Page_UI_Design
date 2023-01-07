@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
 
-:root{
-
-
-}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -12,4 +8,64 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #0e5fd7,#3c1499 );
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+.container{
+    max-width: 1200px;
+    position: relative;
+}
+
+.container i{
+    height: 50px;
+    width: 50px;
+    background: #eeee;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container i:first-child{
+    left: -30px;
+}
+.container i:last-child{
+    right:-30px;
+}
+
+.container .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.container .carousel img{
+    height: 340px;
+    width: calc(100%/3);
+    object-fit: cover;
+    margin-left: 14px;
+}
+
+.container .carousel img:first-child{
+    margin-left: 0;
+}
+
+@media (max-width:950px){
+    .container .carousel img{
+        width: calc(100%/2);
+    }
+}
+@media (max-width:600px){
+    .container .carousel img{
+        width: 100%;
+    }
 }
