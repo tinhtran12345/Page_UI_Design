@@ -35,6 +35,7 @@ body{
     transform: translateY(-50%);
 }
 .container i:first-child{
+    display: none;
     left: -30px;
 }
 .container i:last-child{
@@ -46,8 +47,17 @@ body{
     cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
+    scroll-behavior: smooth;
 
 }
+.carousel .dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel .dragging img{
+    pointer-events: none;
+}
+
 .container .carousel img{
     height: 340px;
     width: calc(100%/3);
