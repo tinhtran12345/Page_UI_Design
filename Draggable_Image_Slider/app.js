@@ -9,7 +9,8 @@ let scrollWidth = carousel.scrollWidth -carousel.clientWidth;
 const showHideIcons = ()=>{
     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none":"block";
     arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none":"block";
-}
+}        
+
 
 arrowIcons.forEach(icon =>{
     icon.addEventListener("click", ()=>{
